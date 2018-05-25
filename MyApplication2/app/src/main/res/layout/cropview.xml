@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000">
+
+        <com.kevin.crop.view.UCropView
+            android:id="@+id/weixin_act_ucrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/crop_act_save_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_done"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="10dp"
+            fab:fabSize="normal" />
+    </android.support.design.widget.CoordinatorLayout>
+
+</RelativeLayout>

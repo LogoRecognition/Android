@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/detail_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:scrollbars="vertical">
+        <TextView
+            android:id="@+id/brand_name"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:text="Acura"
+            android:textSize="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/brand_img"
+            app:layout_constraintTop_toBottomOf="@+id/brand_name"
+            android:src="@drawable/acura_0024"
+            android:layout_marginTop="10dp"
+            app:civ_border_width="1dp"
+            app:civ_border_color="@color/rgray"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+        <View
+            android:id="@+id/history_bar"
+            app:layout_constraintTop_toBottomOf="@+id/brand_img"
+            android:layout_marginTop="10dp"
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="35dp">
+
+        </View>
+        <ImageView
+            android:id="@+id/history_star"
+            app:layout_constraintTop_toBottomOf="@+id/brand_img"
+            android:src="@drawable/personal_star"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+        <TextView
+            app:layout_constraintTop_toBottomOf="@+id/brand_img"
+            app:layout_constraintLeft_toRightOf="@+id/history_star"
+
+            android:textSize="15dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/white"
+            android:text="品牌历史"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/history_introduce"
+            app:layout_constraintTop_toBottomOf="@+id/history_bar"
+            android:text="测试"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <View
+            android:id="@+id/logo_bar"
+            app:layout_constraintTop_toBottomOf="@+id/history_introduce"
+            android:layout_marginTop="10dp"
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="35dp">
+
+        </View>
+        <ImageView
+            android:id="@+id/logo_star"
+            app:layout_constraintTop_toBottomOf="@+id/history_introduce"
+            android:src="@drawable/personal_star"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+        <TextView
+            app:layout_constraintTop_toBottomOf="@+id/history_introduce"
+            app:layout_constraintLeft_toRightOf="@+id/history_star"
+            android:textSize="15dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/white"
+            android:text="Logo理念"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/logo_concept"
+            app:layout_constraintTop_toBottomOf="@id/logo_star"
+            android:text="测试"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <View
+            android:id="@+id/product_bar"
+            app:layout_constraintTop_toBottomOf="@+id/logo_concept"
+            android:layout_marginTop="10dp"
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="35dp">
+
+        </View>
+        <ImageView
+            android:id="@+id/product_star"
+            app:layout_constraintTop_toBottomOf="@+id/logo_concept"
+            android:src="@drawable/personal_star"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+        <TextView
+            app:layout_constraintTop_toBottomOf="@+id/logo_concept"
+            app:layout_constraintLeft_toRightOf="@+id/history_star"
+
+            android:textSize="15dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/white"
+            android:text="经典产品"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <android.support.v7.widget.RecyclerView
+            app:layout_constraintTop_toBottomOf="@id/product_star"
+
+            android:id="@+id/products"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

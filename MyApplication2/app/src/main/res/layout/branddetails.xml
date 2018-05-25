@@ -1,0 +1,84 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:background="#ffff00"
+        android:orientation="vertical" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ff6600" >
+            <ImageView
+                android:id ="@+id/brandimg"
+                android:src="@drawable/acuracar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:scaleType="centerCrop" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/gray"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <com.thinkcool.circletextimageview.CircleTextImageView
+                android:id="@+id/brandcircle"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                app:citv_border_color="@android:color/white"
+                app:citv_border_width="2dp"
+                app:citv_fill_color="@color/orange"
+                app:citv_text_color="@android:color/white"
+                app:citv_text_padding="35dp"
+                app:citv_text_size="32sp"
+                app:citv_text_text="Acura" />
+
+            <TextView
+                android:id="@+id/intro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:text="INTRODUCTION"
+                android:textColor="@color/orange"
+                android:textSize="30sp"
+                android:layout_below="@+id/brandcircle"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/intro"
+                android:scrollbarStyle="insideInset">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:paddingTop="20dp"
+                    android:text="Precision Crafted Performance is the future of this brand but it's not a destination. It's a mindset and a commitment to doing new and challenging things based on our own unique ideas for our customers."
+                    android:textColor="@color/orange"
+                    android:textSize="25sp" />
+            </ScrollView>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
